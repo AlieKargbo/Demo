@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h4>Music</h4>
+        </div>
+        <ul class="nav-links li">
+            <li>
+                <a href="./home.html" class="nav-links a">Home</a>
+            </li>
+            <li>
+                <a href="./about.html" class="nav-links a">About</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="main-container">
+        <div class="container-songs">
+            <ul class="list-songs">
+            </ul>
+        </div>
+        <div class="container-player">
+            <canvas id=analyzer-render></canvas>
+            <audio class="audio" controls></audio>
+        </div>
+        <form action="/songs" class="upload-form" method="POST" enctype="multipart/form-data">
+            Upload Song
+            <input type="file" name="song">
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

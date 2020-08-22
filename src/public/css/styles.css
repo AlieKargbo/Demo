@@ -1,0 +1,109 @@
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #5D4954;
+}
+.logo{
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #121314;
+    color: #dfe0e6;
+}
+.main-container{
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex: 1;
+}
+.container-songs{
+    flex: 3;
+    overflow-y: auto
+}
+.song{
+    list-style: none;
+    cursor: pointer;
+    padding: 1em;
+    background: #1c1c1f;
+    border-bottom: 2px solid #121314;
+}
+.container-player{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.upload-form{
+    display: none;
+}
+#analyzer-render{
+    margin-bottom: 1em;
+    width: 300px;
+    height: 300px;
+    border: 2px solid #2f2f35;
+    background: #121314;
+}
+.audio{
+    width: 200px;
+}
+@media (min-width:600px){
+    .main-container{
+        flex-direction: row;
+    }
+    .container-songs{
+        flex: 1;
+    }
+    .container-player{
+        flex: 2;
+    }
+    .upload-form{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right:  0;
+    }
+    #analyzer-render{
+        width: 500px;
+        height: 300px;
+    }
+    .audio{
+        width: 400px;
+    }
+}
